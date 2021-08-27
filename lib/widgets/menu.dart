@@ -21,7 +21,28 @@ class Menu extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            Item()
+            Item(),
+            SizedBox(
+              height: 10,
+            ),
+            Item(),
+            SizedBox(
+              height: 20,
+            ),
+            Divider(),
+            Item(),
+            SizedBox(
+              height: 10,
+            ),
+            Item(),
+            SizedBox(
+              height: 10,
+            ),
+            Item(),
+            SizedBox(
+              height: 10,
+            ),
+            Item(),
           ],
         ),
       ),

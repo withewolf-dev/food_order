@@ -8,11 +8,11 @@ import 'package:auto_route/auto_route.dart' as _i1;
 import 'package:flutter/material.dart' as _i2;
 
 import '../bottom-navigation/bottom-navigation.dart' as _i3;
-import '../screens/file.dart' as _i8;
+import '../screens/account.dart' as _i8;
+import '../screens/cart.dart' as _i7;
 import '../screens/home.dart' as _i5;
 import '../screens/resturant.dart' as _i4;
-import '../screens/shared.dart' as _i7;
-import '../screens/starred.dart' as _i6;
+import '../screens/search.dart' as _i6;
 
 class AppRouter extends _i1.RootStackRouter {
   AppRouter([_i2.GlobalKey<_i2.NavigatorState>? navigatorKey])
@@ -35,17 +35,17 @@ class AppRouter extends _i1.RootStackRouter {
         builder: (_) {
           return const _i1.EmptyRouterPage();
         }),
-    StarredRouter.name: (routeData) => _i1.MaterialPageX<dynamic>(
+    SearchRouter.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
           return const _i1.EmptyRouterPage();
         }),
-    SharedRouter.name: (routeData) => _i1.MaterialPageX<dynamic>(
+    CartRouter.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
           return const _i1.EmptyRouterPage();
         }),
-    FileRouter.name: (routeData) => _i1.MaterialPageX<dynamic>(
+    AccountRouter.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
           return const _i1.EmptyRouterPage();
@@ -55,20 +55,20 @@ class AppRouter extends _i1.RootStackRouter {
         builder: (_) {
           return const _i5.HomeScreen();
         }),
-    StarredScreen.name: (routeData) => _i1.MaterialPageX<dynamic>(
+    SearchScreen.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
-          return const _i6.StarredScreen();
+          return const _i6.SearchScreen();
         }),
-    SharedScreen.name: (routeData) => _i1.MaterialPageX<dynamic>(
+    CartScreen.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
-          return const _i7.SharedScreen();
+          return const _i7.CartScreen();
         }),
-    FileSreen.name: (routeData) => _i1.MaterialPageX<dynamic>(
+    AccountSreen.name: (routeData) => _i1.MaterialPageX<dynamic>(
         routeData: routeData,
         builder: (_) {
-          return const _i8.FileSreen();
+          return const _i8.AccountSreen();
         })
   };
 
@@ -78,15 +78,15 @@ class AppRouter extends _i1.RootStackRouter {
           _i1.RouteConfig(HomeRouter.name,
               path: 'home',
               children: [_i1.RouteConfig(HomeScreen.name, path: '')]),
-          _i1.RouteConfig(StarredRouter.name,
-              path: 'starred',
-              children: [_i1.RouteConfig(StarredScreen.name, path: '')]),
-          _i1.RouteConfig(SharedRouter.name,
-              path: 'shared',
-              children: [_i1.RouteConfig(SharedScreen.name, path: '')]),
-          _i1.RouteConfig(FileRouter.name,
-              path: 'file',
-              children: [_i1.RouteConfig(FileSreen.name, path: '')])
+          _i1.RouteConfig(SearchRouter.name,
+              path: 'search',
+              children: [_i1.RouteConfig(SearchScreen.name, path: '')]),
+          _i1.RouteConfig(CartRouter.name,
+              path: 'cart',
+              children: [_i1.RouteConfig(CartScreen.name, path: '')]),
+          _i1.RouteConfig(AccountRouter.name,
+              path: 'accunt',
+              children: [_i1.RouteConfig(AccountSreen.name, path: '')])
         ]),
         _i1.RouteConfig(ResturantRoute.name, path: '/resturant-page')
       ];
@@ -112,25 +112,25 @@ class HomeRouter extends _i1.PageRouteInfo {
   static const String name = 'HomeRouter';
 }
 
-class StarredRouter extends _i1.PageRouteInfo {
-  const StarredRouter({List<_i1.PageRouteInfo>? children})
-      : super(name, path: 'starred', initialChildren: children);
+class SearchRouter extends _i1.PageRouteInfo {
+  const SearchRouter({List<_i1.PageRouteInfo>? children})
+      : super(name, path: 'search', initialChildren: children);
 
-  static const String name = 'StarredRouter';
+  static const String name = 'SearchRouter';
 }
 
-class SharedRouter extends _i1.PageRouteInfo {
-  const SharedRouter({List<_i1.PageRouteInfo>? children})
-      : super(name, path: 'shared', initialChildren: children);
+class CartRouter extends _i1.PageRouteInfo {
+  const CartRouter({List<_i1.PageRouteInfo>? children})
+      : super(name, path: 'cart', initialChildren: children);
 
-  static const String name = 'SharedRouter';
+  static const String name = 'CartRouter';
 }
 
-class FileRouter extends _i1.PageRouteInfo {
-  const FileRouter({List<_i1.PageRouteInfo>? children})
-      : super(name, path: 'file', initialChildren: children);
+class AccountRouter extends _i1.PageRouteInfo {
+  const AccountRouter({List<_i1.PageRouteInfo>? children})
+      : super(name, path: 'accunt', initialChildren: children);
 
-  static const String name = 'FileRouter';
+  static const String name = 'AccountRouter';
 }
 
 class HomeScreen extends _i1.PageRouteInfo {
@@ -139,20 +139,20 @@ class HomeScreen extends _i1.PageRouteInfo {
   static const String name = 'HomeScreen';
 }
 
-class StarredScreen extends _i1.PageRouteInfo {
-  const StarredScreen() : super(name, path: '');
+class SearchScreen extends _i1.PageRouteInfo {
+  const SearchScreen() : super(name, path: '');
 
-  static const String name = 'StarredScreen';
+  static const String name = 'SearchScreen';
 }
 
-class SharedScreen extends _i1.PageRouteInfo {
-  const SharedScreen() : super(name, path: '');
+class CartScreen extends _i1.PageRouteInfo {
+  const CartScreen() : super(name, path: '');
 
-  static const String name = 'SharedScreen';
+  static const String name = 'CartScreen';
 }
 
-class FileSreen extends _i1.PageRouteInfo {
-  const FileSreen() : super(name, path: '');
+class AccountSreen extends _i1.PageRouteInfo {
+  const AccountSreen() : super(name, path: '');
 
-  static const String name = 'FileSreen';
+  static const String name = 'AccountSreen';
 }

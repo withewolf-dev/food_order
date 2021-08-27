@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:kloud/bottom-navigation/bottom-navigation.dart';
-import 'package:kloud/screens/file.dart';
+import 'package:kloud/screens/account.dart';
 import 'package:kloud/screens/home.dart';
 import 'package:kloud/screens/resturant.dart';
-import 'package:kloud/screens/shared.dart';
-import 'package:kloud/screens/starred.dart';
+import 'package:kloud/screens/search.dart';
+import 'package:kloud/screens/cart.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
@@ -23,29 +23,27 @@ import 'package:kloud/screens/starred.dart';
           ],
         ),
         AutoRoute(
-          path: "starred",
-          name: "StarredRouter",
+          path: "search",
+          name: "SearchRouter",
           page: EmptyRouterPage,
           children: [
-            AutoRoute(path: '', page: StarredScreen),
+            AutoRoute(path: '', page: SearchScreen),
           ],
         ),
         // our AccountRouter has been moved into the children field
 
         AutoRoute(
-          path: "shared",
-          name: "SharedRouter",
+          path: "cart",
+          name: "CartRouter",
           page: EmptyRouterPage,
-          children: [
-            AutoRoute(path: '', page: SharedScreen),
-          ],
+          children: [AutoRoute(path: '', page: CartScreen)],
         ),
         AutoRoute(
-          path: "file",
-          name: "FileRouter",
+          path: "accunt",
+          name: "AccountRouter",
           page: EmptyRouterPage,
           children: [
-            AutoRoute(path: '', page: FileSreen),
+            AutoRoute(path: '', page: AccountSreen),
           ],
         ),
         // our AccountRouter has been moved into the children field

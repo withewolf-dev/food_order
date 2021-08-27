@@ -10,9 +10,9 @@ class BottomNavigation extends StatelessWidget {
     return AutoTabsScaffold(
       routes: const [
         HomeRouter(),
-        StarredRouter(),
-        SharedRouter(),
-        FileRouter()
+        SearchRouter(),
+        CartRouter(),
+        AccountRouter(),
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return BottomNavigationBar(

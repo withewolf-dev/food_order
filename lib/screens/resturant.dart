@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:kloud/widgets/menu-layout.dart';
 import 'package:kloud/widgets/menu.dart';
 import 'package:kloud/widgets/resturant-info.dart';
 
@@ -21,15 +22,17 @@ class ResturantPage extends StatelessWidget {
               color: Colors.black,
             )),
       ),
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            ResturantInfo(),
-            SizedBox(
-              height: 50,
-            ),
-            Menu()
-          ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              ResturantInfo(),
+              SizedBox(
+                height: 50,
+              ),
+              Menu()
+            ],
+          ),
         ),
       ),
     );
